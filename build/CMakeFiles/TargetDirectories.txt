@@ -1,0 +1,3 @@
+/home/dars-png/Code/Projects/img/build/CMakeFiles/img_test.dir
+/home/dars-png/Code/Projects/img/build/CMakeFiles/edit_cache.dir
+/home/dars-png/Code/Projects/img/build/CMakeFiles/rebuild_cache.dir

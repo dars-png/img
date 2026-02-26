@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/img_test.dir/link.d CMakeFiles/img_test.dir/test.c.o CMakeFiles/img_test.dir/img.c.o -o img_test  -lm -lpthread -ldl -lGL -lX11 -lXi -lXcursor

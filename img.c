@@ -1,5 +1,5 @@
 #include "img.h"
-#include "stb_image.h"
+#include "include/stb_image.h"
 
 img_data load_img_data_from_file(const char* path) {
 	img_data data;
