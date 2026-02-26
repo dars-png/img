@@ -1,4 +1,4 @@
-#include <cstdint>
+#include <stdint.h>
 #include "sokol/sokol_gfx.h"
 
 typedef struct img_data {
