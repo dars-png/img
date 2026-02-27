@@ -1,7 +1,10 @@
 #define SOKOL_IMPL
 #define SOKOL_GLCORE
 #include "img.h"
+#include "sokol/sokol_app.h"
+#include "sokol/sokol_glue.h"
 
+// this is problem but i fix tomorrow
 int main() {
 	img_data data = load_img_data_from_file("test_assets/ptsd_meme.png");
 	sg_image img = load_img_from_data(data);
