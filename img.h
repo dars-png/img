@@ -14,5 +14,6 @@ typedef struct img_data {
 
 img_data load_img_data_from_file(const char* path);
 sg_image load_img_from_data(img_data data);
+void img_data_free(img_data data);
 
 #endif

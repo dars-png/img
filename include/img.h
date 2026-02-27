@@ -1,14 +1,28 @@
-#include "img.h"
-#define STB_IMAGE_IMPLEMENTATION
-#include "include/stb_image.h"
+#ifndef IMG_H
+#define IMG_H
 
-img_data load_img_data_from_file(const char* path) {
+#include <stdint.h>
+#include "sokol_gfx.h"
+#include "stb_image.h"
+
+typedef struct img_data {
+	int width;	
+	int height;	
+	int channels;
+
+	unsigned char* data;
+} img_data;
+
+//static inline img_data load_img_data_from_file(const char* path);
+//static inline sg_image load_img_from_data(img_data data);
+
+static inline img_data load_img_data_from_file(const char *path) {
 	img_data data;
 	data.data = stbi_load(path, &data.width, &data.height, &data.channels, 4);
 	return data;
 }
 
-sg_image load_img_from_data(img_data data) {
+static inline sg_image load_img_from_data(img_data data) {
 	if (!data.data) {
 		return (sg_image){0};
 	}
@@ -31,6 +45,5 @@ sg_image load_img_from_data(img_data data) {
 	return img;
 }
 
-void img_data_free(img_data data) {
-	stbi_image_free(data.data);
-}
+
+#endif

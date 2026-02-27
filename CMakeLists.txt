@@ -6,8 +6,9 @@ project(img_test
 
 set(CMAKE_C_STANDARD 11)
 
+add_library(img_lib img.c img.h)
 
-add_executable(img_test test.c img.c)
+add_executable(img_test test.c)
 
 target_include_directories(img_test PRIVATE 
 	${CMAKE_CURRENT_SOURCE_DIR}/sokol
@@ -22,4 +23,5 @@ target_link_libraries(img_test PRIVATE
 	X11
 	Xi
 	Xcursor
+	img_lib
 )
