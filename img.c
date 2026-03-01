@@ -25,7 +25,7 @@ sg_image load_img_from_data(img_data data) {
 			.ptr = data.data,
 			.size = (size_t) (data.width * data.height * 4)
 		}
-			});
+	});
 
 
 	return img;
