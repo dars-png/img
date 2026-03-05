@@ -13,6 +13,7 @@ add_executable(img_test test.c)
 target_include_directories(img_test PRIVATE 
 	${CMAKE_CURRENT_SOURCE_DIR}/sokol
 	${CMAKE_CURRENT_SOURCE_DIR}/include
+	${CMAKE_CURRENT_SOURCE_DIR}/shaders
 )
 
 target_link_libraries(img_test PRIVATE

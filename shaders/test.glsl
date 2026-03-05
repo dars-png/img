@@ -15,17 +15,16 @@ void main() {
 
 
 @fs fs
-out vec4 FragColour;
+layout(binding = 0) uniform texture2D tex;
+layout(binding = 0) uniform sampler smp;
 
 in vec3 outColour;
 in vec2 TexCoord;
 
-layout(binding = 0) uniform texture2D _ourTexture;
-layout(binding = 0) uniform sampler ourTexture_smp;
-#define ourTexture sampler2D(_ourTexture, ourTexture_smp)
+out vec4 frag_color;
 
 void main() {
-	FragColour = texture(ourTexture, TexCoord);
+	frag_color = texture(sampler2D(tex, smp), TexCoord);
 }
 @end
 
