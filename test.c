@@ -33,19 +33,19 @@ static void init(void) {
 
 	state.bind.vertex_buffers[0] = sg_make_buffer(&(sg_buffer_desc){
 		.data = SG_RANGE(vertices), // just found out you can do this btw
-		.size = sizeof(vertices),
+		//.size = sizeof(vertices),
 			});
 
 	printf("Vertex Buffer Chillin'\n");
 
 	uint16_t indices[] = {
-		0, 1, 3,
-		1, 2, 3 
+		0, 1, 2,
+		0, 2, 3 
 	};
 
 	state.bind.index_buffer = sg_make_buffer(&(sg_buffer_desc){
 		.usage.index_buffer = true,
-		.size = sizeof(indices),
+		//.size = sizeof(indices),
 		.data = SG_RANGE(indices),
 	});
 
@@ -91,7 +91,7 @@ void frame(void) {
 	sg_apply_pipeline(state.pip);
 	sg_apply_bindings(&state.bind);
 
-	sg_draw(0, 4, 1);
+	sg_draw(0, 6, 1);
 	sg_end_pass();
 	sg_commit();
 }
