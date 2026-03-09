@@ -1,8 +1,6 @@
 #ifndef IMG_H
 #define IMG_H
 
-// okay we're gonna make this bihh header-only
-
 #include <stdint.h>
 #include <unistd.h>
 
@@ -28,7 +26,7 @@ void load_img_from_data(sg_image img, img_data data);
 void img_data_free(img_data data);
 
 
-#ifdef DARS_IMG_IMPLEMENTATION
+#if defined(DARS_IMG_IMPLEMENTATION) && defined(STB_IMAGE_IMPLEMENTATION)
 img_data load_img_data_from_file(const char* path) {
 	img_data data;
 
